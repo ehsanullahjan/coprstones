@@ -19,9 +19,12 @@ wvkbd is a Wayland virtual keyboard tailored for wlroots compositors, featuring 
 
 %prep
 %autosetup
+sed -i 's/^CFLAGS = /CFLAGS += /' config.mk
 
 %build
-%make_build PREFIX=%{_prefix}
+export CFLAGS="${CFLAGS} -fPIE"
+export LDFLAGS="${LDFLAGS} -pie"
+%make_build PREFIX=%{_prefix} LAYOUT=mobintl
 
 %install
 %make_install PREFIX=%{_prefix} MANPREFIX=%{_mandir}
