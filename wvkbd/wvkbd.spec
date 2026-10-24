@@ -25,9 +25,11 @@ wvkbd is a Wayland virtual keyboard tailored for wlroots compositors, featuring 
 
 %install
 %make_install PREFIX=%{_prefix}
+ln -s wvkbd-mobintl %{buildroot}%{_bindir}/wvkbd
 
 %files
 %{_bindir}/wvkbd-mobintl
+%{_bindir}/wvkbd
 %{_mandir}/man1/wvkbd.1*
 %license LICENSE
 
