@@ -15,7 +15,7 @@ BuildRequires:  pkgconfig(pangocairo)
 BuildRequires:  scdoc
 
 %description
-wvkbd is a Wayland virtual keyboard tailored for wlroots compositors, featuring text-input-v3 support.
+wvkbd is a Wayland virtual keyboard tailored for wlroots compositors.
 
 %prep
 %autosetup
@@ -29,11 +29,13 @@ export LDFLAGS="${LDFLAGS} -pie"
 %install
 %make_install PREFIX=%{_prefix} MANPREFIX=%{_mandir}
 ln -s wvkbd-mobintl %{buildroot}%{_bindir}/wvkbd
+ln -s wvkbd.1.gz %{buildroot}%{_mandir}/man1/wvkbd-mobintl.1.gz
 
 %files
-%{_bindir}/wvkbd-mobintl
 %{_bindir}/wvkbd
+%{_bindir}/wvkbd-mobintl
 %{_mandir}/man1/wvkbd.1*
+%{_mandir}/man1/wvkbd-mobintl.1*
 %license LICENSE
 
 %changelog
