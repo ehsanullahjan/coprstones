@@ -6,7 +6,7 @@ A well-maintained collection of build specs for projects that don't provide offi
 
 | Package                | Description                                                    | Version |
 | ---------------------- | -------------------------------------------------------------- | ------- |
-| **[`wvkbd`](./wvkbd)** | On-screen keyboard tailored for wlroots compositors (Wayland). | `0.20`  |
+| **[`wvkbd`](./wvkbd)** | On-screen keyboard tailored for wlroots compositors (Wayland). | `0.21`  |
 
 ## Usage
 

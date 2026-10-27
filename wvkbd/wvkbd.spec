@@ -1,5 +1,5 @@
 Name:           wvkbd
-Version:        0.20
+Version:        0.21
 Release:        1%{?dist}
 Summary:        On-screen keyboard for wlroots compositors
 
@@ -44,5 +44,8 @@ ln -s wvkbd.1 %{buildroot}%{_mandir}/man1/wvkbd-deskintl.1
 %license LICENSE
 
 %changelog
+* Tue Oct 27 2026 ehsanj <ehsanullahjan@gmail.com> - 0.21-1
+- Update to upstream version v0.21
+
 * Fri Oct 23 2026 ehsanj <ehsanullahjan@gmail.com> - 0.20-1
 - Initial packaging for Graystone: https://github.com/ehsanullahjan/graystone
