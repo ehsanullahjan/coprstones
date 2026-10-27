@@ -25,17 +25,22 @@ sed -i 's/^CFLAGS = /CFLAGS += /' config.mk
 export CFLAGS="${CFLAGS} -fPIE"
 export LDFLAGS="${LDFLAGS} -pie"
 %make_build PREFIX=%{_prefix} LAYOUT=mobintl
+%make_build PREFIX=%{_prefix} LAYOUT=deskintl
 
 %install
-%make_install PREFIX=%{_prefix} MANPREFIX=%{_mandir}
+%make_install PREFIX=%{_prefix} MANPREFIX=%{_mandir} LAYOUT=mobintl
+%make_install PREFIX=%{_prefix} MANPREFIX=%{_mandir} LAYOUT=deskintl
 ln -s wvkbd-mobintl %{buildroot}%{_bindir}/wvkbd
-ln -s wvkbd.1.gz %{buildroot}%{_mandir}/man1/wvkbd-mobintl.1.gz
+ln -s wvkbd.1 %{buildroot}%{_mandir}/man1/wvkbd-mobintl.1
+ln -s wvkbd.1 %{buildroot}%{_mandir}/man1/wvkbd-deskintl.1
 
 %files
 %{_bindir}/wvkbd
 %{_bindir}/wvkbd-mobintl
+%{_bindir}/wvkbd-deskintl
 %{_mandir}/man1/wvkbd.1*
 %{_mandir}/man1/wvkbd-mobintl.1*
+%{_mandir}/man1/wvkbd-deskintl.1*
 %license LICENSE
 
 %changelog
