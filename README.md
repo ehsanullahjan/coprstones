@@ -4,18 +4,19 @@ A well-maintained collection of build specs for projects that don't provide offi
 
 ## Available Packages
 
-| Package                | Description                                                    | Version |
-| ---------------------- | -------------------------------------------------------------- | ------- |
-| **[`wvkbd`](./wvkbd)** | On-screen keyboard tailored for wlroots compositors (Wayland). | `0.21`  |
+| Package                      | Description                                                    | Version |
+| ---------------------------- | -------------------------------------------------------------- | ------- |
+| **[`swayrot8`](./swayrot8)** | Tablet and 2-in-1 laptop auto-rotation daemon for SwayWM       | `1.0.0` |
+| **[`wvkbd`](./wvkbd)**       | On-screen keyboard tailored for wlroots compositors (Wayland). | `0.21`  |
 
 ## Usage
 
-To use these packages on a Fedora-based system:
+On Fedora-based systems:
 
 ```bash
 # Enable the repository
 sudo dnf copr enable -y ehsanj/coprstones
 
-# Install packages
+# Install one or more of the available packages
 sudo dnf install -y wvkbd
 ```
