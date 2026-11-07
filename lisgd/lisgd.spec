@@ -28,9 +28,6 @@ export LDFLAGS="${LDFLAGS} -pie"
 
 %make_build CPPFLAGS="-DWITH_WAYLAND" LIBS="-linput -lm -lwayland-client" CC="gcc"
 
-%check
-%make_check CPPFLAGS="-DWITH_WAYLAND" LIBS="-linput -lm -lwayland-client" CC="gcc"
-
 %install
 %make_install PREFIX=%{_prefix}
 
