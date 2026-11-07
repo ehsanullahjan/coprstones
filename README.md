@@ -1,11 +1,12 @@
 # coprstones
 
-A well-maintained collection of build specs for projects that don't provide official [RPM](https://rpm.org/)s. The repository maintains specs for building native RPM packages via [Fedora COPR](https://copr.fedorainfracloud.org/).
+A collection of build specs for projects that don't provide official [RPM](https://rpm.org/)s. The repository maintains specs for building native RPM packages via the [ehsanj/coprstones](https://copr.fedorainfracloud.org/coprs/ehsanj/coprstones/) [Fedora COPR](https://copr.fedorainfracloud.org/) repository.
 
 ## Available Packages
 
 | Package                      | Description                                                    | Version |
 | ---------------------------- | -------------------------------------------------------------- | ------- |
+| **[`lisgd`](./lisgd)**       | Libinput synthetic gesture daemon for Wayland                  | `0.4.0` |
 | **[`swayrot8`](./swayrot8)** | Tablet and 2-in-1 laptop auto-rotation daemon for SwayWM       | `1.0.0` |
 | **[`wvkbd`](./wvkbd)**       | On-screen keyboard tailored for wlroots compositors (Wayland). | `0.21`  |
 

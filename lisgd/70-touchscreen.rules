@@ -1,0 +1,2 @@
+SUBSYSTEM=="input", KERNEL=="event[0-9]*", ENV{ID_INPUT_TOUCHSCREEN}=="1", ENV{ID_BUS}=="i2c", SYMLINK+="input/touchscreen"
+SUBSYSTEM=="input", KERNEL=="event[0-9]*", ENV{ID_INPUT_TOUCHSCREEN}=="1", ENV{ID_BUS}=="spi", SYMLINK+="input/touchscreen"
